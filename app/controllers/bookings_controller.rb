@@ -14,4 +14,19 @@ class BookingsController < ApplicationController
       redirect_to plant_path(@plant)
     end
   end
+
+  def destroy
+    @booking.destroy
+    redirect_to root_path
+  end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:start_date, :end_date)
+  end
+
+  def set_booking
+    @booking = Booking.find(params[:booking])
+  end
 end
