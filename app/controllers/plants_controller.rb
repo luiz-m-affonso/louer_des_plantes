@@ -8,6 +8,7 @@ class PlantsController < ApplicationController
 
   def new
     @plant = Plant.new
+    authorize @plant
   end
 
   def create
