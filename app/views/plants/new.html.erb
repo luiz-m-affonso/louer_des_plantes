@@ -1,0 +1,16 @@
+<%# <% <%= render "components/banner" %> %> %>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h2 class="text-dark">Create a new Plant</h2>
+
+      <%= simple_form_for @plant do |f| %>
+        <%= f.input :common_name %>
+        <%= f.input :scientific_name %>
+        <%= f.input :family %>
+        <%= f.input :image_url %>
+        <%= f.input :address %>
+      <% end %>
+    </div>
+  </div>
+</div>
