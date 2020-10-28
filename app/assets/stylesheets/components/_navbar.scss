@@ -12,16 +12,49 @@
 }
 
 .navbar-logged-out {
-  position: relative;
-  width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  width: 100%;
   height: 75px;
   background: #FFFFFF;
 
-  img {
-    position: absolute;
+  .logo {
     width: 94px;
     height: 48px;
-    left: 25px;
-    top: 13px;
+    margin-left: 25px;
+  }
+
+  #login {
+    margin-right: 25px;
   }
 }
+
+.navbar-logged-in {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  width: 100%;
+  height: 75px;
+  background: #FFFFFF;
+
+  .logo {
+    width: 94px;
+    height: 48px;
+    margin-left: 25px;
+  }
+
+  #navbar-end {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-right: 25px;
+
+    #button {
+      margin-right: 15px;
+    }
+  }
+}
+
+
+

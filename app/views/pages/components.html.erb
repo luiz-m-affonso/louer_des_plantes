@@ -1,5 +1,21 @@
 <div class="navbar-logged-out">
-  <img src="logo-simple.png" alt="logo">
+ <%= image_tag('logo-simple.png', class: "logo") %>
+ <div id="login">
+   <a href="#" class="button-green">login</a>
+ </div>
+
+</div>
+<div class="m-3">
+  spacer
+</div>
+<div class="navbar-logged-in">
+ <%= image_tag('logo-simple.png', class: "logo") %>
+ <div id="navbar-end">
+  <div id="button">
+    <a href="#" class="button-green">add plant</a>
+  </div>
+   <%= image_tag('julia-avatar.png', class: "avatar") %>
+ </div>
 </div>
 
 <div class="container mt-5">
