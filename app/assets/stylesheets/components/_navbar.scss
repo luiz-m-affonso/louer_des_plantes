@@ -10,3 +10,18 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-logged-out {
+  position: relative;
+  width: 1440px;
+  height: 75px;
+  background: #FFFFFF;
+
+  img {
+    position: absolute;
+    width: 94px;
+    height: 48px;
+    left: 25px;
+    top: 13px;
+  }
+}

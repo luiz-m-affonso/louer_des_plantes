@@ -1,0 +1,81 @@
+.button-yellow {
+  padding: 6px 30px;
+  background: $yellow;
+  border-radius: 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 170%;
+  text-align: center;
+  color: $dark-gray;
+  text-decoration: none;
+
+  &:hover {
+    background: $hover-yellow;
+    text-decoration: none;
+    color: $dark-gray;
+  }
+
+}
+
+.button-blue {
+  padding: 6px 30px;
+  background: $blue;
+  border-radius: 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 170%;
+  text-align: center;
+  color: $dark-gray;
+  text-decoration: none;
+
+   &:hover {
+    background: $hover-blue;
+    text-decoration: none;
+    color: $dark-gray;
+  }
+}
+
+.button-pink {
+  padding: 6px 30px;
+  background: $pink;
+  border-radius: 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 170%;
+  text-align: center;
+  color: $dark-gray;
+  text-decoration: none;
+
+   &:hover {
+    background: $hover-pink;
+    text-decoration: none;
+    color: $dark-gray;
+  }
+}
+
+.button-green {
+  padding: 6px 30px;
+  background: $green;
+  border-radius: 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 170%;
+  text-align: center;
+  color: $dark-gray;
+  text-decoration: none;
+
+   &:hover {
+    background: $hover-green;
+    text-decoration: none;
+    color: $dark-gray;
+  }
+}
+
