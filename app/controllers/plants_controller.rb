@@ -1,17 +1,20 @@
 class PlantsController < ApplicationController
   before_action :set_plant, only: [:show, :edit, :update, :destroy]
   def index
-    @plants = Plant.all
+    @plants = policy_scope(Plant).order(created_at: :desc)
   end
 
-  def show; end
-
-  def new
-    @plant = Plant.new
+  def show
     authorize @plant
   end
 
+  def new
+    authorize @plant
+    @plant = Plant.new
+  end
+
   def create
+    authorize @plant
     @plant = Plant.create(plant_params)
     if @plant.save
       redirect_to plant_path(@plant)
@@ -20,14 +23,18 @@ class PlantsController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    authorize @plant
+  end
 
   def update
+    authorize @plant
     @plant.update(plant_params)
     redirect_to plant_path(@plant)
   end
 
   def destroy
+    authorize @plant
     @plant.destroy
     redirect_to root_path
   end
