@@ -5,6 +5,9 @@
       <h2 class="text-dark">Update Plant</h2>
 
       <%= simple_form_for @plant do |f| %>
+        <% if policy(plant).edit? %>
+          <%= link_to "Update", edit_plant_path(plant) %>
+        <% end %>
         <%= f.input :image_url %>
         <%= f.input :common_name %>
         <%= f.input :scientific_name %>
