@@ -1,51 +1,50 @@
 .card-plant {
-  position: relative;
   width: 320px;
-  height: 340px;
   background-color: white;
   font-family: Montserrat;
   color: $dark-gray;
+  border: 0.5px solid rgba(109, 109, 109, 0.5);
+  box-sizing: border-box;
+  padding: 20px 20px 7px;
 
   .img {
-    position: absolute;
     width: 277px;
     height: 240px;
-    left: 21px;
-    top: 20px;
     background-color: $dark-gray;
     background-size: cover;
     background-position: center;
   }
 
-  h3 {
-    position: absolute;
-    width: 238px;
-    height: 42px;
-    left: 21px;
-    top: 275px;
-    font-size: 24px;
-    font-weight: 500;
-  }
+  .card-plant-footer {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 
-  h4 {
-    position: absolute;
-    width: 34px;
-    height: 31.38px;
-    right: 21px;
-    top: 275px;
-    text-align: right;
-    font-size: 18px;
-    font-weight: 400;
-  }
+    .spacer {
+      height: 55px;
+    }
 
-  p {
-    position: absolute;
-    width: 223px;
-    height: 24px;
-    left: 21px;
-    top: 300px;
-    font-style: italic;
-    font-size: 14px;
-    font-weight: 200;
+    h3 {
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 3px;
+      line-height: 1;
+      margin-block-start: 0em;
+    }
+
+    h4 {
+      text-align: right;
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    p {
+      font-style: italic;
+      font-size: 14px;
+      font-weight: 200;
+      margin-top: 3px;
+    }
   }
 }
