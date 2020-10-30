@@ -1,0 +1,22 @@
+#banner-main {
+  height: 55vh;
+  background-color: $green;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #content {
+    text-align: center;
+
+    p {
+      font-family: Montserrat;
+      font-style: italic;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 45px;
+      color: $dark-gray;
+    }
+  }
+}
