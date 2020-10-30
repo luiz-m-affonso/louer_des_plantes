@@ -8,6 +8,13 @@ $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
 $body-bg:                 $green;
 $font-size-base: 1rem;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1320px,
+  xxl: 1320px
+) !default;
 
 // Colors
 $body-color: $dark-gray;
