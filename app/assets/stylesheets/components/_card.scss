@@ -1,0 +1,51 @@
+.card-plant {
+  position: relative;
+  width: 320px;
+  height: 340px;
+  background-color: white;
+  font-family: Montserrat;
+  color: $dark-gray;
+
+  .img {
+    position: absolute;
+    width: 277px;
+    height: 240px;
+    left: 21px;
+    top: 20px;
+    background-color: $dark-gray;
+    background-size: cover;
+    background-position: center;
+  }
+
+  h3 {
+    position: absolute;
+    width: 238px;
+    height: 42px;
+    left: 21px;
+    top: 275px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  h4 {
+    position: absolute;
+    width: 34px;
+    height: 31.38px;
+    right: 21px;
+    top: 275px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  p {
+    position: absolute;
+    width: 223px;
+    height: 24px;
+    left: 21px;
+    top: 300px;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 200;
+  }
+}
