@@ -1,6 +1,16 @@
-<%= render 'components/navbar_logout' %>
-
-<footer class="footer fixed-bottom mastfoot mt-auto">
-  <p>Made @ Le Wagon</p>
-</footer>
+<header>
+  <%= render 'components/navbar_logout' %>
+</header>
+<main class="green d-flex flex-column min-vh-100">
+  <div id="banner-main" class="mt-5">
+    <div id="content">
+      <%= image_tag('logo-big.png', class: "mb-4") %>
+      <p class="mb-4">Rent a plant or share your plants with other renters</p>
+        <div class="search__container">
+          <input class="search__input" type="text" placeholder="find a plant">
+        </div>
+    </div>
+  </div>
+</main>
+<%= render 'components/footer' %>
 
