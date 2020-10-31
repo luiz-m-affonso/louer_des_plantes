@@ -1,15 +1,20 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:new, :create, :destroy]
+  before_action :set_booking, only: [:destroy]
 
   def new
-    @booking = Booking.new(booking_params)
+    @plant = Plant.find(params[:plant_id])
+    @booking = Booking.new
+    authorize(@booking)
   end
 
   def create
     @plant = Plant.find(params[:plant_id])
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
+    @booking.plant = @plant
+    authorize(@booking)
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to profile_path
     else
       redirect_to plant_path(@plant)
     end
