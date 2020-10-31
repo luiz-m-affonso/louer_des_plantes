@@ -1,19 +1,24 @@
 <%= render "components/navbar_logout" %>
-<div class="beige-bg w-100 full">
+<div class="beige-bg w-100">
   <div class="container mh-100">
     <div class="row justify-content-md-center">
       <div class="col-sm-12 col-md-6 mt-5 pl-4">
-      <div class="card-plant pb-5 mb-5">
-        <div class="img" style="background-image: url('<%= @plant.image_url %>')"></div>
-        <p></p>
+        <div class="card-plant pb-5 mb-5">
+          <div class="img" style="background-image: url('<%= @plant.image_url %>')"></div>
+          <p></p>
+        </div>
       </div>
-    </div>
 
       <div class="col-sm-12 col-md-6 mt-5">
         <div>
           <h3 class="plant-common-name text-capitalize"><%= @plant.common_name %></h3>
           <p class="plant-scientific-name text-capitalize"><%= @plant.scientific_name %></p>
-          <button class="button-buy"> $ <%= @plant.price %></button>
+
+
+          <%= link_to(new_plant_booking_path(@plant)) do %>
+            <button class= "button-buy float-right"> $ <%= @plant.price %> </button>
+          <% end %>
+
         </div>
       </div>
     </div>
@@ -21,3 +26,4 @@
 </div>
 
 <%= render "components/footer" %>
+
