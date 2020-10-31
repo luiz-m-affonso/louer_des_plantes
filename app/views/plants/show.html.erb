@@ -1,28 +1,17 @@
-<% <%= render "components/plant-banner" %> %>
+<%= render "components/navbar_login" %>
 <div class="container mt-5">
    <div class="row mb-5">
-    <div class="col-sm-12 col-md-6 pr-4">
-        <%= render "plants/new", plant: @plant %>
-    </div>
     <div class="col-sm-12 col-md-6 mt-2 pl-4">
-      <table class="table">
-        <tbody>
-          <% @plant.each do |plant| %>
-            <tr>
-              <td><%= plant.image_url %></td>
-              <td><%= plant.common_name %></td>
-              <td><%= plant.scientific_name %></td>
-              <td><%= plant.family %></td>
-              <td><%= plant.price %></td>
-              <td><%= plant.address %></td>
-              <td>
-                <%= link_to plant_path(plant), class: "text-secondary", method: :delete, data: { confirm: "Are you sure?" } do %>
-                  <i class="fa fa-trash destroy_plant"></i>
-                <% end %>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+      hi
+      <div class="card-plant mb-5">
+        <div class="img" style="background-image: url('<%= @plant.image_url %>')"></div>
+        <div class="card-plant-footer">
+          <div>
+            <h3><%= @plant.common_name %></h3>
+            <p><%= @plant.scientific_name %></p>
+          </div>
+          <h4>$<%= @plant.price %></h4>
+        </div>
+      </div>
     </div>
   </div>
