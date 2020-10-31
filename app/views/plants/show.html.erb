@@ -1,17 +1,24 @@
 <%= render "components/navbar_login" %>
-<div class="container mt-5">
-   <div class="row mb-5">
-    <div class="col-sm-12 col-md-6 mt-2 pl-4">
-      hi
-      <div class="card-plant mb-5">
+<div class="beige-bg ">
+  <div class="container mh-100">
+    <div class="row justify-content-md-center mt-5">
+      <div class="col-sm-12 col-md-6 mt-5 pl-4">
+        hi
+      <div class="card-plant pb-5 mb-5">
         <div class="img" style="background-image: url('<%= @plant.image_url %>')"></div>
-        <div class="card-plant-footer">
-          <div>
-            <h3><%= @plant.common_name %></h3>
-            <p><%= @plant.scientific_name %></p>
-          </div>
-          <h4>$<%= @plant.price %></h4>
+        <p></p>
+      </div>
+    </div>
+
+      <div class="col-sm-12 col-md-6 mt-5">
+        <div>
+          <h3 class="plant-common-name text-capitalize"><%= @plant.common_name %></h3>
+          <p class="plant-scientific-name text-capitalize"><%= @plant.scientific_name %></p>
+          <div class="button-buy"> $<%= @plant.price %> </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<%= render "components/footer" %>
