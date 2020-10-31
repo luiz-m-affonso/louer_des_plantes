@@ -10,5 +10,6 @@ class PagesController < ApplicationController
 
   def profile
     @bookings = Booking.where(user_id: current_user.id)
+    @plants = Plant.where(user_id: current_user.id)
   end
 end
