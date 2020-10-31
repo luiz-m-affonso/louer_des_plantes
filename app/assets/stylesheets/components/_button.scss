@@ -80,14 +80,24 @@
 }
 
 .button-buy {
-  padding: 1.63333px 0px 0px 50px;
-  width: 188.75px;
-  height: 48.27px;
-  left: 1098px;
-  top: 442px;
+  padding: 6px 30px;
+  background: $blue;
+  border-radius: 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 170%;
+  text-align: center;
+  color: $dark-gray;
+  text-decoration: none;
 
+   &:hover {
+    background: $hover-blue;
+    text-decoration: none;
+    color: $dark-gray;
+  }
 
-  background: #E6F6F6;
-  border-radius: 32.2976px;
+  border: 1px solid $blue;
 }
 

@@ -1,13 +1,13 @@
 <header>
-  <div class="navbar-logged-out">
- <%= link_to root_path do %>
+  <div class="navbar-logged-in">
+    <%= link_to root_path do %>
       <%= image_tag('logo-simple.png', class: "logo") %>
     <% end %>
- <div id="login">
-  <div id="button">
+   <div id="navbar-end">
+    <div id="button">
       <%= link_to 'add plant', new_plant_path, class: "button-green" %>
-      <%= link_to 'login', new_user_session_path, class: "button-blue" %>
-      <%= link_to 'logout', destroy_user_session_path, :method => :delete, class: "button-pink" %>
     </div>
- </div>
+     <%= image_tag('julia-avatar.png', class: "avatar") %>
+   </div>
+  </div>
 </header>
