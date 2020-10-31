@@ -19,7 +19,7 @@ class PlantsController < ApplicationController
     if @plant.save
       redirect_to plant_path(@plant)
     else
-      render 'new'
+      render 'show'
     end
   end
 
