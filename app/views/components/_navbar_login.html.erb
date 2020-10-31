@@ -1,6 +1,8 @@
 <header>
   <div class="navbar-logged-in">
-   <%= image_tag('logo-simple.png', class: "logo") %>
+    <%= link_to root_path do %>
+      <%= image_tag('logo-simple.png', class: "logo") %>
+    <% end %>
    <div id="navbar-end">
     <div id="button">
       <%= link_to 'add plant', new_plant_path, class: "button-green" %>

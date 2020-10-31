@@ -2,7 +2,7 @@
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-md-8">
-      <h2 class="text-dark">Create a new Plant</h2>
+      <h2 class="text-dark mb-4">Create a new Plant</h2>
 
       <%= simple_form_for @plant do |f| %>
         <%= f.input :common_name %>
@@ -10,7 +10,7 @@
         <%= f.input :family %>
         <%= f.input :image_url %>
         <%= f.input :address %>
-        <%= f.button :submit, class: 'button-yellow' %>
+        <%= f.button :submit, class: 'button-yellow mt-3 w-100' %>
       <% end %>
     </div>
   </div>
