@@ -1,0 +1,14 @@
+<%= render "components/navbar_login" %>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h2 class="text-dark mb-4">Rent a Plant</h2>
+
+      <%= simple_form_for [@plant, @booking] do |f| %>
+        <%= f.input :start_date %>
+        <%= f.input :end_date %>
+        <%= f.button :submit, class: 'button-yellow mt-3 w-100' %>
+      <% end %>
+    </div>
+  </div>
+</div>

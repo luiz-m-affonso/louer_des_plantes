@@ -5,17 +5,17 @@ class PlantsController < ApplicationController
   end
 
   def show
-    authorize @plant
+    authorize(@plant)
   end
 
   def new
     @plant = Plant.new
-    authorize @plant
+    authorize(@plant)
   end
 
   def create
     @plant = Plant.create(plant_params)
-    authorize @plant
+    authorize(@plant)
     if @plant.save
       redirect_to plant_path(@plant)
     else
@@ -24,7 +24,7 @@ class PlantsController < ApplicationController
   end
 
   def edit
-    authorize @plant
+    authorize(@plant)
   end
 
   def update
@@ -34,7 +34,7 @@ class PlantsController < ApplicationController
   end
 
   def destroy
-    authorize @plant
+    authorize(@plant)
     @plant.destroy
     redirect_to root_path
   end
@@ -43,7 +43,7 @@ class PlantsController < ApplicationController
 
   def set_plant
     @plant = Plant.find(params[:id])
-    authorize @plant
+    authorize(@plant)
   end
 
   def plant_params
