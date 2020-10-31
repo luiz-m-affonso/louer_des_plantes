@@ -9,13 +9,13 @@ class PlantsController < ApplicationController
   end
 
   def new
-    authorize @plant
     @plant = Plant.new
+    authorize @plant
   end
 
   def create
-    authorize @plant
     @plant = Plant.create(plant_params)
+    authorize @plant
     if @plant.save
       redirect_to plant_path(@plant)
     else
@@ -43,6 +43,7 @@ class PlantsController < ApplicationController
 
   def set_plant
     @plant = Plant.find(params[:id])
+    authorize @plant
   end
 
   def plant_params
