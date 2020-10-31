@@ -1,3 +1,44 @@
- <% @bookings.each do |booking| %>
-  <%= booking.plant %>
-<% end %>
+ <%= render "components/navbar_logout" %>
+
+<div class="beige-bg w-100 pt-5">
+  <div class="container pb-3">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <h2>Plants booked</h2>
+        <div class="mt-5 d-flex flex-row justify-content-between flex-wrap">
+          <% @bookings.each do |booking| %>
+              <div class="card-plant mb-5">
+                <div class="img" style="background-image: url('<%= booking.plant.image_url %>')"></div>
+                <div class="card-plant-footer">
+                  <div>
+                    <h3><%= booking.plant.common_name %></h3>
+                    <p>From <%= booking.start_date %> to <%= booking.end_date %></p>
+                  </div>
+                  <h4>$<%= booking.plant.price %></h4>
+                </div>
+              </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <h2>My plants</h2>
+        <div class="mt-5 d-flex flex-row justify-content-between flex-wrap">
+          <% @plants.each do |plant| %>
+              <div class="card-plant mb-5">
+                <div class="img" style="background-image: url('<%= plant.image_url %>')"></div>
+                <div class="card-plant-footer">
+                  <div>
+                    <h3><%= plant.common_name %></h3>
+                    <p><%= plant.scientific_name %></p>
+                  </div>
+                  <h4>$<%= plant.price %></h4>
+                </div>
+              </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
