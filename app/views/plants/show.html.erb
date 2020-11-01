@@ -1,31 +1,23 @@
 <%= render "components/navbar_logout" %>
 <div class="beige-bg w-100">
-  <div class="container mh-100">
-    <div class="row justify-content-md-center">
-      <div class="d-flex align-items-center justify-content-between mt-5">
-
-        <div class="col-sm-12 col-md-6">
-          <div class="card-plant">
-            <div class="img" style="background-image: url('<%= @plant.image_url %>')"></div>
-            <div class="card-plant-footer">
-              <div class="spacer"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-12 col-md-6">
-          <div>
-            <h3 class="plant-common-name text-capitalize"><%= @plant.common_name %></h3>
-            <p class="plant-scientific-name text-capitalize"><%= @plant.scientific_name %></p>
-
-            <%= link_to(new_plant_booking_path(@plant)) do %>
-            <button class= "button-buy float-right"> <i class="fas fa-cart-plus"></i> $<%= @plant.price %> </button>
-            <% end %>
-          </div>
-        </div>
-
+  <div class="container vh-70 d-flex align-items-center justify-content-around mt-5 px-5 flex-wrap">
+   <div>
+    <div class="card-plant mb-5">
+      <div class="img" style="background-image: url('<%= @plant.image_url %>')"></div>
+      <div class="card-plant-footer">
+        <div class="spacer"></div>
       </div>
     </div>
+  </div>
+
+  <div>
+
+    <h3 class="plant-common-name text-capitalize"><%= @plant.common_name %></h3>
+    <p class="plant-scientific-name text-capitalize"><%= @plant.scientific_name %></p>
+
+    <%= link_to(new_plant_booking_path(@plant)) do %>
+    <button class= "button-buy float-right"> <i class="fas fa-cart-plus"></i> $<%= @plant.price %> </button>
+    <% end %>
   </div>
 </div>
 
