@@ -51,9 +51,9 @@ puts "data deleted"
 puts "start seeding"
 
 User.create!([
-  {email: "testadmin@lewagon.com", password: "testadminuser", password_confirmation: "testadminuser"},
-  {email: "testuser@lewagon.com", password: "testuseraccount", password_confirmation: "testuseraccount"},
-  {email: "testcustomer@lewagon.com", password: "testcustomeruser", password_confirmation: "testcustomeruser"}
+  {first_name: "Julia", last_name: "Mathias", email: "testadmin@lewagon.com", password: "testadminuser", password_confirmation: "testadminuser"},
+  {first_name: "Daniel", last_name: "Azevedo", email: "testuser@lewagon.com", password: "testuseraccount", password_confirmation: "testuseraccount"},
+  {first_name: "Luiz", last_name: "Souza", email: "testcustomer@lewagon.com", password: "testcustomeruser", password_confirmation: "testcustomeruser"}
 ])
 
 users_arr = []
