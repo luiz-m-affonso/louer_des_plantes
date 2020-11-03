@@ -8,9 +8,9 @@
         <%= f.input :common_name %>
         <%= f.input :scientific_name %>
         <%= f.input :family %>
-        <%= f.input :image_url %>
         <%= f.input :address %>
         <%= f.input :price %>
+        <%= f.input :photo, as: :file %>
         <%= f.button :submit, class: 'button-yellow mt-3 w-100' %>
       <% end %>
     </div>
