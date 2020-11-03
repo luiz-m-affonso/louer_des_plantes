@@ -1,6 +1,6 @@
 <%= render "components/navbar_logout" %>
-<div class="d-flex align-items-center justify-content-center vh-70">
-  <div class="w-50 mt-5">
+<div class="d-flex align-items-center justify-content-center pt-5 mb-5">
+  <div class="w-50">
 
     <h2 class="mb-3">Sign up</h2>
 
@@ -8,6 +8,14 @@
       <%= f.error_notification %>
 
       <div class="form-inputs">
+        <%= f.input :first_name,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "first name" }%>
+        <%= f.input :last_name,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "last name" }%>
         <%= f.input :email,
                     required: true,
                     autofocus: true,
