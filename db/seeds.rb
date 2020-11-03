@@ -63,6 +63,7 @@ users.each do |user|
 end
 
 data_json.each do |plant|
+  image = URI.open(plant["image_url"])
   plant = Plant.create({
     common_name: plant["common_name"],
     scientific_name: plant["scientific_name"],
@@ -71,6 +72,7 @@ data_json.each do |plant|
     address: Faker::Address.street_address,
     user_id: users_arr.sample
     })
+  plant.photo.attach(io: image  , filename: "#{plant.common_name}-#{plant.id}.jpg")
   puts "plant #{plant.id} created"
 end
 
