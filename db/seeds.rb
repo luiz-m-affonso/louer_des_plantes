@@ -67,7 +67,6 @@ data_json.each do |plant|
     common_name: plant["common_name"],
     scientific_name: plant["scientific_name"],
     family: plant["family"],
-    image_url: plant["image_url"],
     price: rand(1..100),
     address: Faker::Address.street_address,
     user_id: users_arr.sample
@@ -75,4 +74,5 @@ data_json.each do |plant|
   puts "plant #{plant.id} created"
 end
 
+# image_url: plant["image_url"],
 puts "finish seeding"

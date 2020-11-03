@@ -51,7 +51,6 @@ ActiveRecord::Schema.define(version: 2020_11_02_002148) do
     t.string "common_name"
     t.string "scientific_name"
     t.string "family"
-    t.string "image_url"
     t.integer "price"
     t.string "address"
     t.bigint "user_id", null: false
