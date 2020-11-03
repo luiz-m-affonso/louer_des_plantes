@@ -51,9 +51,9 @@ puts "data deleted"
 puts "start seeding"
 
 User.create!([
-  {email: "testadmin@lewagon.com", password: "testadminuser", password_confirmation: "testadminuser"},
-  {email: "testuser@lewagon.com", password: "testuseraccount", password_confirmation: "testuseraccount"},
-  {email: "testcustomer@lewagon.com", password: "testcustomeruser", password_confirmation: "testcustomeruser"}
+  {first_name: "Julia", last_name: "Mathias", email: "testadmin@lewagon.com", password: "testadminuser", password_confirmation: "testadminuser"},
+  {first_name: "Daniel", last_name: "Azevedo", email: "testuser@lewagon.com", password: "testuseraccount", password_confirmation: "testuseraccount"},
+  {first_name: "Luiz", last_name: "Souza", email: "testcustomer@lewagon.com", password: "testcustomeruser", password_confirmation: "testcustomeruser"}
 ])
 
 users_arr = []
@@ -67,7 +67,6 @@ data_json.each do |plant|
     common_name: plant["common_name"],
     scientific_name: plant["scientific_name"],
     family: plant["family"],
-    image_url: plant["image_url"],
     price: rand(1..100),
     address: Faker::Address.street_address,
     user_id: users_arr.sample
@@ -75,4 +74,5 @@ data_json.each do |plant|
   puts "plant #{plant.id} created"
 end
 
+# image_url: plant["image_url"],
 puts "finish seeding"
