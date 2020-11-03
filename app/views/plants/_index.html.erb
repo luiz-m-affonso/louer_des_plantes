@@ -8,7 +8,7 @@
             <%= link_to plant_path(plant), class: "text-decoration-none" do %>
 
               <div class="card-plant mb-5">
-                <div class="img" style="background-image: url('<%= cl_image_path plant.photo.key, crop: :fill %>')"></div>
+                <div class="img" style="background-image: url('<%= cl_image_path plant.photo.key %>')"></div>
                 <div class="card-plant-footer">
                   <div>
                     <h3><%= plant.common_name %></h3>
