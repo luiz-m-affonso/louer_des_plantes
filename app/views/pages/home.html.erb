@@ -7,8 +7,15 @@
       <%= image_tag('logo-big.png', class: "mb-4") %>
       <p class="mb-4">Rent a plant or share your plants with other renters</p>
         <div class="search__container">
-          <input class="search__input" type="text" placeholder="find a plant">
-        </div>
+          <%= form_tag plants_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "search__input",
+              placeholder: "find a plant"
+            %>
+            <%= submit_tag "Search", class: "btn btn-primary" %>
+          <% end %>
+          </div>
     </div>
   </div>
 </main>
