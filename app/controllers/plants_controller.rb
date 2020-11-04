@@ -49,6 +49,6 @@ class PlantsController < ApplicationController
   end
 
   def plant_params
-    params.require(:plant).permit(:common_name, :scientific_name, :family, :image_url, :price, :address)
+    params.require(:plant).permit(:common_name, :scientific_name, :family, :image_url, :price, :address, :photo)
   end
 end
