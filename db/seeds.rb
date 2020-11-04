@@ -62,6 +62,8 @@ users.each do |user|
   users_arr.push(user.id)
 end
 
+address = ["Ladeira da Glória, 26", "Floresta da Tijuca", "Rua Jardim Botânico, 1008"]
+
 data_json.each do |plant|
   image = URI.open(plant["image_url"])
   plant = Plant.create({
@@ -69,7 +71,7 @@ data_json.each do |plant|
     scientific_name: plant["scientific_name"],
     family: plant["family"],
     price: rand(1..100),
-    address: Faker::Address.street_address,
+    address: address.sample,
     user_id: users_arr.sample
     })
   plant.photo.attach(io: image  , filename: "#{plant.common_name}-#{plant.id}.jpg")
