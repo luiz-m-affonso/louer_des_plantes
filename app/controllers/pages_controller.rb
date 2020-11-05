@@ -2,7 +2,11 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :components, :map]
 
   def home
-    @plants = policy_scope(Plant).order(created_at: :desc)
+    if params[:query].present?
+      @plants = policy_scope(Plant).search_by_names_and_family(params[:query])
+    else
+      @plants = []
+    end
   end
 
   def components
