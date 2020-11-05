@@ -7,23 +7,18 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-<<<<<<< HEAD
-<<<<<<< HEAD
-@import 'mapbox-gl/dist/mapbox-gl';
-@import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
 
-=======
-@import "flatpickr/dist/flatpickr";
-@import "flatpickr/dist/themes/light";
->>>>>>> 3365994c69f031ff30185a2369f054c8ef09c4d5
-=======
 @import 'mapbox-gl/dist/mapbox-gl';
 @import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
 
 @import "flatpickr/dist/flatpickr";
 @import "flatpickr/dist/themes/light";
->>>>>>> b3606222c59869b253c5182d01bf9e48b7d35090
 
+@import 'mapbox-gl/dist/mapbox-gl';
+@import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
+
+@import "flatpickr/dist/flatpickr";
+@import "flatpickr/dist/themes/light";
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
