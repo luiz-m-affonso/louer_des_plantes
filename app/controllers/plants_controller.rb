@@ -1,6 +1,7 @@
 class PlantsController < ApplicationController
   before_action :set_plant, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @plants = policy_scope(Plant).order(created_at: :desc)
   end
@@ -49,6 +50,6 @@ class PlantsController < ApplicationController
   end
 
   def plant_params
-    params.require(:plant).permit(:common_name, :scientific_name, :family, :image_url, :price, :address, :photo)
+    params.require(:plant).permit(:common_name, :scientific_name, :family, :image_url, :price, :address, :photo, :latitude, :longitude)
   end
 end
