@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get '/profile', to: 'pages#profile'
 
+  get '/map', to: 'pages#map'
+
   get '/components', to: 'pages#components'
 
   resources :plants do
