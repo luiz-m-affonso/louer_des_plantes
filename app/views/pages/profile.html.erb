@@ -1,6 +1,10 @@
  <%= render "components/navbar_logout" %>
 
  <div class="container mt-5">
+  <div class="profile mb-5">
+    <h3>Hello <%= @current_user.first_name %></h3>
+
+  </div>
   <div class="booked">
     <h2>Plants booked</h2>
     <div class="mt-5 d-flex flex-row justify-content-between flex-wrap">
