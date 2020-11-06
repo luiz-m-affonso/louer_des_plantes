@@ -104,3 +104,25 @@
   border: 1px solid $blue;
 }
 
+.button-blue-search {
+  background: $blue;
+  border-radius: 50%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: $dark-gray;
+  text-decoration: none;
+  border: none;
+  height: 48px;
+  width: 48px;
+
+   &:hover {
+    background: $hover-blue;
+    text-decoration: none;
+    color: $dark-gray;
+  }
+}
+
