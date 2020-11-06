@@ -6,16 +6,17 @@
     <div id="content">
       <%= image_tag('logo-big.png', class: "mb-4") %>
       <p class="mb-4">Rent a plant or share your plants with other renters</p>
-        <div class="search__container">
-          <%= form_tag root_path, method: :get do %>
+        <div class="search__input">
+          <%= form_tag root_path,     class: "d-flex justify-content-between", method: :get do %>
             <%= text_field_tag :query,
               params[:query],
-              class: "search__input",
               placeholder: "find a plant"
             %>
-            <%= submit_tag "Search", class: "btn btn-primary" %>
+            <%= button_tag type: 'submit', class: "button-blue-search" do %>
+              <i class="fas fa-search"></i>
+            <% end %>
           <% end %>
-          </div>
+        </div>
     </div>
   </div>
 </main>
