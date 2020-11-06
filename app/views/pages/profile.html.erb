@@ -1,8 +1,12 @@
  <%= render "components/navbar_logout" %>
 
  <div class="container mt-5">
-  <div class="profile mb-5">
-    <h3>Hello <%= @current_user.first_name %></h3>
+  <div class="profile mb-5 d-flex flex-row justify-content-between align-items-center">
+    <div>
+      <h3>Hello <%= @current_user.first_name %>!</h3>
+      <p>You have <strong><%= @plants.count %> plants</strong>  available to rent and you have already rented <strong><%= @bookings.count %> plants</strong>.</p>
+    </div>
+    <div class="avatar-large" style="background-image: url('<%= cl_image_path @current_user.photo.key %>')"></div>
 
   </div>
   <div class="booked">
@@ -14,7 +18,7 @@
         <div class="card-content">
           <div>
             <h3><%= booking.plant.common_name %></h3>
-            <p>Booked from <%= booking.start_date.to_formatted_s(:long_ordinal) %> to <%= booking.end_date.to_formatted_s(:long_ordinal) %></p>
+            <p>Booked from <%= booking.start_date.to_formatted_s(:short) %> to <%= booking.end_date.to_formatted_s(:short) %></p>
           </div>
           <h4>$<%= booking.plant.price %></h4>
         </div>
