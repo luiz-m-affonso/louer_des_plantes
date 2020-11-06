@@ -1,7 +1,20 @@
-body {
+.booked {
   background-color: $blue;
+  padding: 40px;
+  border-radius: 25px;
+
+  h2 {
+    font-size: 3em;
+  }
 }
 
-blue-bg {
-  background-color: $blue;
+.my-plants {
+  background-color: $green;
+  padding: 40px;
+  border-radius: 25px;
+
+  h2 {
+    font-size: 3em;
+  }
 }
+

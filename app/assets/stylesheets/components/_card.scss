@@ -73,3 +73,55 @@
   color: #6D6D6D;
 }
 
+.card-booking {
+  width: 49%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  font-family: Montserrat;
+  color: $dark-gray;
+  border: 0.5px solid rgba(109, 109, 109, 0.5);
+  box-sizing: border-box;
+  padding: 20px;
+  gap: 5px;
+
+  .img {
+    width: 170px;
+    height: 100px;
+    margin-right: 20px;
+    background-color: $dark-gray;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .card-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+
+    h3 {
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 3px;
+      line-height: 1;
+      margin-block-start: 0em;
+    }
+
+    h4 {
+      text-align: right;
+      font-size: 18px;
+      font-weight: 400;
+      margin-left: 4px;
+    }
+
+    p {
+      font-style: italic;
+      font-size: 14px;
+      font-weight: 200;
+      margin-top: 3px;
+      margin-bottom: 0px;
+    }
+  }
+}
