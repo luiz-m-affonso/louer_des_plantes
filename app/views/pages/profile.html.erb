@@ -1,44 +1,50 @@
  <%= render "components/navbar_logout" %>
 
-<div class="w-100 pt-5 blue-bg">
-  <div class="container pb-3">
-    <div class="row">
-      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-        <h2>Plants booked</h2>
-        <div class="mt-5 d-flex flex-row justify-content-between flex-wrap">
-          <% @bookings.each do |booking| %>
-              <div class="card-plant mb-5">
-                <div class="img" style="background-image: url('<%= cl_image_path booking.plant.photo.key %>')"></div>
-                <div class="card-plant-footer">
-                  <div>
-                    <h3><%= booking.plant.common_name %></h3>
-                    <p>From <%= booking.start_date %> to <%= booking.end_date %></p>
-                  </div>
-                  <h4>$<%= booking.plant.price %></h4>
-                </div>
-              </div>
-          <% end %>
+ <div class="container mt-5">
+  <div class="profile mb-5 d-flex flex-row justify-content-between align-items-center">
+    <div>
+      <h3>Hello <%= @current_user.first_name %>!</h3>
+      <p>You have <strong><%= @plants.count %> plants</strong>  available to rent and you have already rented <strong><%= @bookings.count %> plants</strong>.</p>
+    </div>
+    <div class="avatar-large" style="background-image: url('<%= cl_image_path @current_user.photo.key %>')"></div>
+
+  </div>
+  <div class="booked">
+    <h2>Plants booked</h2>
+    <div class="mt-5 d-flex flex-row justify-content-between flex-wrap">
+      <% @bookings.each do |booking| %>
+      <div class="card-booking mb-3">
+        <div class="img" style="background-image: url('<%= cl_image_path booking.plant.photo.key %>')"></div>
+        <div class="card-content">
+          <div>
+            <h3><%= booking.plant.common_name %></h3>
+            <p>Booked from <%= booking.start_date.to_formatted_s(:short) %> to <%= booking.end_date.to_formatted_s(:short) %></p>
+          </div>
+          <h4>$<%= booking.plant.price %></h4>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-        <h2>My plants</h2>
-        <div class="mt-5 d-flex flex-row justify-content-between flex-wrap">
-          <% @plants.each do |plant| %>
-              <div class="card-plant mb-5">
-                <div class="img" style="background-image: url('<%= cl_image_path plant.photo.key %>')"></div>
-                <div class="card-plant-footer">
-                  <div>
-                    <h3><%= plant.common_name %></h3>
-                    <p><%= plant.scientific_name %></p>
-                  </div>
-                  <h4>$<%= plant.price %></h4>
-                </div>
-              </div>
-          <% end %>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
 
+  <div class="my-plants my-5">
+    <h2>My plants</h2>
+    <div class="mt-5 d-flex flex-row justify-content-between flex-wrap">
+      <% @plants.each do |plant| %>
+      <div class="card-booking mb-3">
+        <div class="img" style="background-image: url('<%= cl_image_path plant.photo.key %>')"></div>
+        <div class="card-content">
+          <div>
+            <h3><%= plant.common_name %></h3>
+            <p><%= plant.scientific_name %></p>
+          </div>
+          <h4>$<%= plant.price %></h4>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
 </div>
+
+<%= render 'components/footer' %>
 
