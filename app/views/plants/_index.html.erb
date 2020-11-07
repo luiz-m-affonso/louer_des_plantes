@@ -1,9 +1,7 @@
-<div class="beige-bg w-100 my-3 py-5">
-  <div class="container pb-3">
-    <div class="row">
-      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-        <h2> <%= @plants.any? ? "Plants" : "" %> </h2>
-        <div class="mt-5 d-flex flex-row justify-content-between flex-wrap">
+<div class="beige-bg w-100 d-flex justify-content-center">
+  <div class="w-90">
+    <h1 class="mt-5 mb-4"> <%= @plants.any? ? "Plants" : "" %> </h1>
+        <div class="mt-4 mb-5 d-flex flex-row justify-content-between flex-wrap">
           <% @plants.each do |plant| %>
             <%= link_to plant_path(plant), class: "text-decoration-none" do %>
 
@@ -20,9 +18,7 @@
             <% end %>
           <% end %>
         </div>
-      </div>
-    </div>
   </div>
-
 </div>
+
 
