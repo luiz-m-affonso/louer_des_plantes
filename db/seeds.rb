@@ -62,7 +62,7 @@ users.each do |user|
   users_arr.push(user.id)
 end
 
-address = ["Ladeira da Glória, 26", "Rua Jardim Botânico, 414", "Rua Jardim Botânico, 1008"]
+address = ["Ladeira da Glória, 26", "Rua Jardim Botânico, 414", "Rua Jardim Botânico, 1008", "Avenida Infante Dom Henrique, 10, Flamengo", "Alto da Boa Vista, Rio de Janeiro", "Estrada Santa Marinha, 505", "Rua Guimarães Natal, 52-56"]
 
 data_json.each do |plant|
   image = URI.open(plant["image_url"])
@@ -80,3 +80,5 @@ end
 
 # image_url: plant["image_url"],
 puts "finish seeding"
+
+
