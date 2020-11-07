@@ -25,16 +25,12 @@ require 'faker'
 
 token = '2U0o7bEHdfONF17LTVcbSRhIUc_KyCdBLBmyc2MbPQw'
 plant_web = "https://trefle.io/api/v1/plants?token=#{token}"
-rose_web = "https://trefle.io/api/v1/plants/search?token=#{token}&q=rose"
 
 response = open(plant_web).read
-response_rose = open(rose_web).read
 
 json_response = JSON.parse(response)
-json_response_rose = JSON.parse(response_rose)
 
 data_json = json_response["data"]
-data_json_rose = json_response_rose["data"]
 
 # puts data_json.first["common_name"]
 # puts data_json.first["scientific_name"]
