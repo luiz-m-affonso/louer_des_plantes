@@ -1,26 +1,29 @@
-#banner-main {
-  height: 70vh;
+.banner-main {
+  height: 80vh;
   background-color: $green;
-  padding-top: 55px;
-  padding-bottom: 55px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   #content {
     text-align: center;
+  }
 
-    p {
-      font-family: Montserrat;
-      font-style: italic;
-      font-weight: normal;
-      font-size: 24px;
-      line-height: 45px;
-      color: $dark-gray;
-    }
+  #subtitle {
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 45px;
+    color: $dark-gray;
   }
 }
 
 .green {
   background-color: $green;
+}
+
+#banner-change {
+  height: 50vh;
 }
