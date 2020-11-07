@@ -6,10 +6,9 @@ const buildMap = () => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   return new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v10'
+    style: 'mapbox://styles/luizmatheus/ckh7t1smm0hdo19pgxompka1y'
   });
 };
-
 const initMapbox = () => {
   if (mapElement) {
     const map = buildMap();
@@ -17,8 +16,6 @@ const initMapbox = () => {
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
     map.addControl(new mapboxgl.NavigationControl());
-    map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
-      mapboxgl: mapboxgl }));
       map.addControl(
         new mapboxgl.GeolocateControl({
           positionOptions: {
@@ -46,5 +43,6 @@ const initMapbox = () => {
       markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
       map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
     };
+
 
 export { initMapbox };
