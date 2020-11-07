@@ -8,4 +8,4 @@ export default class extends Controller {
     console.log(this.mainTarget)
   //   this.mainTarget.insertAdjacentHTML('afterend', <%= render "plants/index", plants: @plants %>);
   // }
-}
+}}
