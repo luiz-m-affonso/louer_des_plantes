@@ -1,23 +1,28 @@
-<header>
-  <%= render 'components/navbar_logout' %>
-</header>
+
 <main data-controller="search" data-target="search.main" class="green d-flex flex-column h-100 align-center justify-center">
   <div class="banner-main">
     <div id="content">
       <%= image_tag('logo-big.png', class: "mb-4") %>
       <p id="subtitle" class="mb-4">Rent a plant or share your plants with other renters</p>
     </div>
-    <div class="search__input">
+    <div class="d-flex justify-content-between align-center flex-column">
+      <div class="search__input">
       <%= form_tag root_path,     class: "d-flex justify-content-between", method: :get, remote: true do %>
       <%= text_field_tag :query,
       params[:query],
-      placeholder: "find a plant"
+      placeholder: "search for a plant"
       %>
       <%= button_tag({type: 'submit', class: "button-blue-search"}) do %>
       <i class="fas fa-search"></i>
       <% end %>
       <% end %>
     </div>
+      <%= link_to map_path, class: "button-yellow mt-3 w-100" do %>
+          find a plant near you <i class="fas fa-map-marked-alt pl-1"></i>
+      <% end %>
+
+    </div>
+
   </div>
 </div>
 </main>

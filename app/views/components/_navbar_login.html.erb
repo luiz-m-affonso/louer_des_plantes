@@ -5,9 +5,11 @@
     <% end %>
    <div id="navbar-end">
     <div id="button">
+      <%= link_to 'dashboard', profile_path, class: "button-yellow" %>
       <%= link_to 'add plant', new_plant_path, class: "button-green" %>
+      <%= link_to 'logout', destroy_user_session_path, :method => :delete, class: "button-pink" %>
     </div>
-     <%= image_tag('julia-avatar.png', class: "avatar") %>
+    <div class="avatar" style="background-image: url('<%= cl_image_path current_user.photo.key %>')">
    </div>
   </div>
 </header>
