@@ -68,19 +68,6 @@ end
 
 address = ["Ladeira da Glória, 26", "Rua Jardim Botânico, 414", "Rua Jardim Botânico, 1008", "Avenida Infante Dom Henrique, 10, Flamengo", "Alto da Boa Vista, Rio de Janeiro", "Estrada Santa Marinha, 505", "Rua Guimarães Natal, 52-56"]
 
-data_json_rose.each do |plant|
-  image = URI.open(plant["image_url"])
-  plant = Plant.create({
-    common_name: plant["common_name"],
-    scientific_name: plant["scientific_name"],
-    family: plant["family"],
-    price: rand(1..100),
-    address: address.sample,
-    user_id: users_arr.sample
-    })
-  plant.photo.attach(io: image  , filename: "#{plant.common_name}-#{plant.id}.jpg")
-  puts "rose #{plant.id} created"
-end
 
 data_json.each do |plant|
   image = URI.open(plant["image_url"])
