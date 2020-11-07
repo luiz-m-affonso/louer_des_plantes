@@ -62,7 +62,7 @@ users.each do |user|
   users_arr.push(user.id)
 end
 
-address = ["Ladeira da Glória, 26", "Floresta da Tijuca", "Rua Jardim Botânico, 1008"]
+address = ["Ladeira da Glória, 26", "Rua Jardim Botânico, 414", "Rua Jardim Botânico, 1008"]
 
 data_json.each do |plant|
   image = URI.open(plant["image_url"])
