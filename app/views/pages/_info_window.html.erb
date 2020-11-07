@@ -1,2 +1,13 @@
-<h2><%= plant.common_name %></h2>
+<div class="card-map">
+  <%= link_to plant_path(plant), class: "text-decoration-none" do %>
+  <h3><%= plant.common_name %></h3>
+
+<% end %>
+
+    <div class="img-map" style="background-image: url('<%= cl_image_path plant.photo.key %>')"></div>
+</div>
+
+
+
+
 <p><%= plant.address %></p>

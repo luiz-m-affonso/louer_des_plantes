@@ -20,6 +20,29 @@
   }
 }
 
+.banner-small {
+  height: 15vh;
+  background-color: $green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .content {
+    text-align: center;
+  }
+
+  .subtitle {
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: $dark-gray;
+  }
+}
+
+
 .green {
   background-color: $green;
 }
