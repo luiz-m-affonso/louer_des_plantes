@@ -25,12 +25,16 @@ require 'faker'
 
 token = '2U0o7bEHdfONF17LTVcbSRhIUc_KyCdBLBmyc2MbPQw'
 plant_web = "https://trefle.io/api/v1/plants?token=#{token}"
+rose_web = "https://trefle.io/api/v1/plants/search?token=#{token}&q=rose"
 
 response = open(plant_web).read
+response_rose = open(rose_web).read
 
 json_response = JSON.parse(response)
+json_response_rose = JSON.parse(response_rose)
 
 data_json = json_response["data"]
+data_json_rose = json_response_rose["data"]
 
 # puts data_json.first["common_name"]
 # puts data_json.first["scientific_name"]
@@ -64,6 +68,20 @@ end
 
 address = ["Ladeira da Glória, 26", "Rua Jardim Botânico, 414", "Rua Jardim Botânico, 1008", "Avenida Infante Dom Henrique, 10, Flamengo", "Alto da Boa Vista, Rio de Janeiro", "Estrada Santa Marinha, 505", "Rua Guimarães Natal, 52-56"]
 
+data_json_rose.each do |plant|
+  image = URI.open(plant["image_url"])
+  plant = Plant.create({
+    common_name: plant["common_name"],
+    scientific_name: plant["scientific_name"],
+    family: plant["family"],
+    price: rand(1..100),
+    address: address.sample,
+    user_id: users_arr.sample
+    })
+  plant.photo.attach(io: image  , filename: "#{plant.common_name}-#{plant.id}.jpg")
+  puts "rose #{plant.id} created"
+end
+
 data_json.each do |plant|
   image = URI.open(plant["image_url"])
   plant = Plant.create({
@@ -77,6 +95,8 @@ data_json.each do |plant|
   plant.photo.attach(io: image  , filename: "#{plant.common_name}-#{plant.id}.jpg")
   puts "plant #{plant.id} created"
 end
+
+
 
 # image_url: plant["image_url"],
 puts "finish seeding"
