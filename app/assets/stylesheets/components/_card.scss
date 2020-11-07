@@ -125,3 +125,35 @@
     }
   }
 }
+
+.card-map {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 5px;
+  margin: 0;
+  font-family: Montserrat;
+
+  .img-map {
+    width: 180px;
+    height: 70px;
+    background-color: $dark-gray;
+    background-size: cover;
+    background-position: center;
+  }
+
+  h3 {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+  a {
+    color: $dark-gray;
+
+    &:hover {
+      color: $light-gray;
+    }
+  }
+}
+

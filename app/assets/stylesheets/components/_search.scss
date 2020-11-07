@@ -1,7 +1,7 @@
 .search__input {
   width: 489px;
   padding: 4px 4px 4px 16px;
-
+  text-align: center;
   background-color: white;
   transition: transform 250ms ease-in-out;
   font-size: 14px;
@@ -27,11 +27,13 @@
 }
 
 .search__input #query:focus {
+  text-align: center;
   outline: none;
   background-color: white;
 }
 
 .search__input input {
+  text-align: center;
   border: none;
   width: 90%;
 }
