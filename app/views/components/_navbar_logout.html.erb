@@ -4,14 +4,7 @@
     <% end %>
  <div id="login">
   <div id="button">
-      <%= link_to 'dashboard', profile_path, class: "button-yellow" %>
-      <%= link_to 'add plant', new_plant_path, class: "button-green" %>
-      <%= link_to 'map', map_path, class: "button-green"%>
-      <% if @user = current_user %>
-      <%= link_to 'logout', destroy_user_session_path, :method => :delete, class: "button-pink" %>
-      <% else %>
       <%= link_to 'login', new_user_session_path, class: "button-blue" %>
-      <% end %>
     </div>
  </div>
 </div>
